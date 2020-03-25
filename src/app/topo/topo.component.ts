@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OfertasService } from '../ofertas.service';
-import { Observable, Subject } from 'rxjs';
-import { switchMap, debounceTime } from 'rxjs/operators';
+import { Observable, Subject, of } from 'rxjs';
+import { switchMap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Oferta } from '../shared/oferta.model';
 
 @Component({
@@ -21,8 +21,16 @@ export class TopoComponent implements OnInit {
   ngOnInit() {
     this.ofertas = this.subjectPesquisa.pipe(
       debounceTime(1000),
+      distinctUntilChanged(),
       switchMap((termo: string) => {
         console.log('requisição http para api');
+
+        if (termo.trim() === '') {
+
+          // retorna um Observable de array de ofertas vazio
+          return of<Oferta[]>([]);
+        }
+
         return this.ofertasService.pesquisaOfertas(termo);
       })
     );
