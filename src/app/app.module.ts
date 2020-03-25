@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+
 // import { AppRoutingModule } from './app-routing.module';
 import { ROUTES } from './app.routes';
 
@@ -15,6 +18,8 @@ import { DiversaoComponent } from './diversao/diversao.component';
 import { OfertaComponent } from './oferta/oferta.component';
 import { ComoUsarComponent } from './oferta/como-usar/como-usar.component';
 import { OndeFicaComponent } from './oferta/onde-fica/onde-fica.component';
+
+registerLocaleData(localePt, 'pt-BR');
 
 @NgModule({
   declarations: [
