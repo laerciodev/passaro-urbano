@@ -26,3 +26,8 @@
 .active {
     color: #FFF
 }
+
+.list-group {
+    position: absolute;
+    width: 90%;
+}

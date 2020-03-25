@@ -12,7 +12,10 @@
               class="form-control"
               (keyup)="pesquisa(termoDaBusca.value)"
               #termoDaBusca
-              placeholder="Pesquise por ofertas...">
+              placeholder="Pesquise por ofertas..." />
+              <ul class="list-group">
+                <li class="list-group-item" *ngFor="let oferta of ofertas | async">{{ oferta.titulo }}</li>
+              </ul>
           </div>
           <div class="col-md-2">
               <a a href="#"><img src="/assets/carrinho.png" /></a>

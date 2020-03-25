@@ -35,8 +35,6 @@ export class TopoComponent implements OnInit {
       })
     ),
     catchError((err: any) => of<Oferta[]>([]));
-    
-    this.ofertas.subscribe(value => console.log(value));
   }
 
   pesquisa(termoDaBusca: string): void {
