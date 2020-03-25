@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Oferta } from '../shared/oferta.model';
 import { OfertasService } from '../ofertas.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-oferta',
