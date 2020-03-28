@@ -14,7 +14,11 @@
               #termoDaBusca
               placeholder="Pesquise por ofertas..." />
               <ul class="list-group">
-                <li class="list-group-item" *ngFor="let oferta of ofertas | async">{{ oferta.titulo }}</li>
+                <li class="list-group-item" *ngFor="let oferta of ofertas | async">
+                  <a [routerLink]="['/oferta', oferta.id]" (click)="limpaPesquisa()">
+                    {{ oferta.titulo }}
+                  </a>
+                </li>
               </ul>
           </div>
           <div class="col-md-2">
