@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { OrdemCompraService } from '../ordem-compra.service'
 import { Pedido } from '../shared/pedido.model'
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ordem-compra',
@@ -34,11 +35,11 @@ export class OrdemCompraComponent implements OnInit {
         this.formulario.value.formaPagamento
       );
 
-      this.ordemCompraService.efetivarCompra(pedido)
-        .subscribe((idPedido: number) => {
-          this.idPedidoCompra = idPedido;
-          console.log(this.idPedidoCompra);
-      });
+      console.log('confirmar compra');
+
+      this.ordemCompraService.efetivarCompra(pedido).pipe(
+        map(resp => console.log(resp)),
+      )
     }
   }
 }

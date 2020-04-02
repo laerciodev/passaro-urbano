@@ -11,7 +11,7 @@ export class OrdemCompraService {
 
     constructor(private http: HttpClient) {}
 
-    public efetivarCompra(pedido: Pedido): Observable<number> {
+    public efetivarCompra(pedido: Pedido) {
         
         const httpOptions = {
             headers: new HttpHeaders({
@@ -23,8 +23,6 @@ export class OrdemCompraService {
             `${URL_API}/pedidos`,
             JSON.stringify(pedido),
             httpOptions
-        ).pipe(
-            map((resp: any) => resp.json().id)
-        );
+        ).toPromise().then(resp => console.log(resp));
     }
 }
