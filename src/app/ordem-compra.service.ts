@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { take } from 'rxjs/operators';
 import { Pedido } from './shared/pedido.model';
 import { URL_API } from './app.api';
 
@@ -23,6 +23,6 @@ export class OrdemCompraService {
             `${URL_API}/pedidos`,
             JSON.stringify(pedido),
             httpOptions
-        ).toPromise().then(resp => console.log(resp));
+        ).pipe(take(1))
     }
 }

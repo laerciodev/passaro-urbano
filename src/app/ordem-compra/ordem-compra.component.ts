@@ -37,8 +37,8 @@ export class OrdemCompraComponent implements OnInit {
 
       console.log('confirmar compra');
 
-      this.ordemCompraService.efetivarCompra(pedido).pipe(
-        map(resp => console.log(resp)),
+      this.ordemCompraService.efetivarCompra(pedido).subscribe(
+        (resp: any) => this.idPedidoCompra = resp.id
       )
     }
   }

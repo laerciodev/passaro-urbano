@@ -206,6 +206,34 @@
       "complemento": null,
       "formaPagamento": "dinheiro",
       "id": 3
+    },
+    {
+      "endereco": "Rua luiz de pinho",
+      "numero": "25",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 4
+    },
+    {
+      "endereco": "Rua quinze de novembro",
+      "numero": "25",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 5
+    },
+    {
+      "endereco": "Rua quinze de novembro de 2020",
+      "numero": "25",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 6
+    },
+    {
+      "endereco": "Rua Gonçalo Feliciano",
+      "numero": "78",
+      "complemento": null,
+      "formaPagamento": "dinheiro",
+      "id": 7
     }
   ]
 }
