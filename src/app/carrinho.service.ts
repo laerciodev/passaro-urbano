@@ -17,8 +17,11 @@ class CarrinhoService {
             oferta.valor,
             1
         );
+
+        this.itens.push(itemCarrinho);
+        console.log(this.itens);
     }
 
 }
 
-export default CarrinhoService;
+export { CarrinhoService };
