@@ -23,7 +23,6 @@ export class TopoComponent implements OnInit {
       debounceTime(1000),
       distinctUntilChanged(),
       switchMap((termo: string) => {
-        console.log('requisição http para api');
 
         if (termo.trim() === '') {
 
@@ -38,7 +37,6 @@ export class TopoComponent implements OnInit {
   }
 
   pesquisa(termoDaBusca: string): void {
-    console.log('keyup caracter: ', termoDaBusca);
     this.subjectPesquisa.next(termoDaBusca);
   }
 

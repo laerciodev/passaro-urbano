@@ -234,6 +234,35 @@
       "complemento": null,
       "formaPagamento": "dinheiro",
       "id": 7
+    },
+    {
+      "endereco": "Rua teste",
+      "numero": "10",
+      "complemento": "10",
+      "formaPagamento": "dinheiro",
+      "itens": [
+        {
+          "id": 5,
+          "img": {
+            "url": "/assets/ofertas/5/img1.jpg"
+          },
+          "titulo": "Kart",
+          "descricao_oferta": "Bateria de Kart de 30 minutos.",
+          "valor": 54.9,
+          "quantidade": 2
+        },
+        {
+          "id": 3,
+          "img": {
+            "url": "/assets/ofertas/3/img1.jpg"
+          },
+          "titulo": "Pizzas Grandes",
+          "descricao_oferta": "Pizza Grande, Mussarela, Marguerita ou outras!",
+          "valor": 21.9,
+          "quantidade": 2
+        }
+      ],
+      "id": 8
     }
   ]
 }
